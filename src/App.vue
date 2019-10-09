@@ -29,8 +29,32 @@
           @click="()=> collapsed = !collapsed"
         />
       </a-layout-header>
-      <a-layout-content :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }">
-        <BaseGenSet msg="This effort below should not take like two days. Assuming you are only making this. Because I did it like 2 hours from scratch."/>
+      <h1 :style="{ margin: '16px 16px'}">Company Profile</h1>
+      <a-layout-content :style="{ margin: '0 16px 16px 16px', padding: '0 24px', background: '#fff', minHeight: '280px' }">
+        <BaseGenSet
+          alertmsg="This effort below should not take like two days. Assuming you are only making this. Because I did it like 2 hours from scratch."
+          smallTitle="General Information"
+          :detailInfo="[
+            { title: 'Company ID', text: '001' },
+            { title: 'Company Name', text: 'Cermati.com' },
+            { title: 'Company NPWP Number', text: '00112233445566' },
+            { title: 'Billing Address', text: 'Jl. Tomang Raya No.38, Jatipulo Palmerah, Jakarta Barat 11430' },
+            { title: 'Terms of Payment', text: '14 days' },
+            { title: 'Credit Limit', text: 'Rp50,000,000' },
+            { title: 'Outstanding Balance', text: 'Rp7,000,000' },
+            { title: 'Yummycater Points', text: '345,090 pts' }
+          ]"
+        />
+      </a-layout-content>
+      <a-layout-content :style="{ margin: '0 16px 16px 16px', padding: '0 24px', background: '#fff', minHeight: '280px' }">
+        <BaseGenSet
+          smallTitle="Person in Charge"
+          :detailInfo="[
+            { title: 'Name', text: 'Kurniawati Juningsih' },
+            { title: 'Email', text: 'kurniawatijuningsih@gmail.com' },
+            { title: 'Mobile Number', text: '081234567890' }
+          ]"
+        />
       </a-layout-content>
     </a-layout>
   </a-layout>
@@ -38,7 +62,6 @@
 
 <script>
 import BaseGenSet from './components/BaseGenSet.vue';
-
 export default {
   name: 'app',
   data(){

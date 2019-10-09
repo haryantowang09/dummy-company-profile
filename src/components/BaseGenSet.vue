@@ -1,20 +1,55 @@
 <template>
-  <div class="hello">
-    <a-alert :message=showMessage() type="info" closeText="x"/>
+  <div class="BaseGenSet">
+    <a-alert v-if="visible" :message=showMessage() type="info" closable closeText="x"/>
+    <br/>
 
-    <!-- here is the show begin -->
+    <a-row>
+      <a-col :span="6">
+        {{ smallTitle }}
+      </a-col>
+      <a-col :span="18">
+        <div v-for="(info, index) of detailInfo" :key="index">
+          <small>{{ info.title }}</small>
+          <p>{{ info.text }}</p>
+        </div>
+      </a-col>
+    </a-row>
   </div>
 </template>
 
 <script>
 export default {
   name: 'BaseGenSet',
+  data() {
+    return {
+      visible: true,
+    }
+  },
   props: {
-    msg: String
+    alertmsg: {
+      type: String,
+      default: 'Default alert message here'
+    },
+    smallTitle: {
+      type: String,
+      default: 'Default Title Here'
+    },
+    detailInfo: {
+      type: Array,
+      default: () => [
+        { title: 1, text: 'My journey with Vue' },
+        { title: 2, text: 'Blogging with Vue' },
+        { title: 3, text: 'Why Vue is so fun' }
+      ]
+    }
   },
   methods: {
     showMessage () {
-      return this.msg || ''
+      if (this.msg === undefined) {
+        this.visible = false;
+      } else {
+        return this.alertmsg;
+      }
     }
   }
 }
