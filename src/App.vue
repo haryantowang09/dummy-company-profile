@@ -36,13 +36,13 @@
           smallTitle="General Information"
           :detailInfo="[
             { title: 'Company ID', text: '001' },
-            { title: 'Company Name', text: 'Cermati.com' },
+            { title: 'Company Name', text: 'CiakCiak.com' },
             { title: 'Company NPWP Number', text: '00112233445566' },
-            { title: 'Billing Address', text: 'Jl. Tomang Raya No.38, Jatipulo Palmerah, Jakarta Barat 11430' },
+            { title: 'Billing Address', text: 'Jl. Besar, Lebaran, Kota, Negara 12345' },
             { title: 'Terms of Payment', text: '14 days' },
             { title: 'Credit Limit', text: 'Rp50,000,000' },
             { title: 'Outstanding Balance', text: 'Rp7,000,000' },
-            { title: 'Yummycater Points', text: '345,090 pts' }
+            { title: 'CiakCiak Points', text: '345,090 pts' }
           ]"
         />
       </a-layout-content>
@@ -50,8 +50,8 @@
         <BaseGenSet
           smallTitle="Person in Charge"
           :detailInfo="[
-            { title: 'Name', text: 'Kurniawati Juningsih' },
-            { title: 'Email', text: 'kurniawatijuningsih@gmail.com' },
+            { title: 'Name', text: 'Srikandi Arjuna Bersatu ' },
+            { title: 'Email', text: 'srimriwing@gmail.com' },
             { title: 'Mobile Number', text: '081234567890' }
           ]"
         />
