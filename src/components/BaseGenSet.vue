@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <a-alert :message=this.msg() type="info" closeText="x"/>
+    <a-alert :message=showMessage() type="info" closeText="x"/>
 
     <!-- here is the show begin -->
   </div>
