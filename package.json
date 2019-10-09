@@ -1,7 +1,9 @@
 {
-  "name": "dummy",
+  "name": "dummy-company-profile",
+  "description": "This is an exercise sample project using Antd Design showing one dashboard company profile page.",
   "version": "0.1.0",
   "private": true,
+  "author": "Wang",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
